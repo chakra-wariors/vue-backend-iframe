@@ -1,5 +1,10 @@
 # 使用
 
+## 依赖
+
+**node** > 10
+**yarn** 安装nodejs完成后，命令行执行 `npm install yarn -g`
+
 ## 目录执行`yarn`
 
 ## 本地启动 `yarn dev`
