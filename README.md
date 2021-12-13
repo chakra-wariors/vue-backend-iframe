@@ -17,3 +17,5 @@
 `export navs`表示顶部菜单
 
 `export default`表示左侧菜单
+
+![image](https://user-images.githubusercontent.com/6766855/145738366-b4967fce-5a3c-485b-998c-59080b800e0c.png)
