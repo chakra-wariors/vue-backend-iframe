@@ -1,5 +1,5 @@
 <template>
-    <iframe width="100%" style="border: none;" height="94%" :src="src" />
+    <iframe width="100%" style="border: none;height: calc(100% - 60px);" :src="src" />
 </template>
 
 <script>

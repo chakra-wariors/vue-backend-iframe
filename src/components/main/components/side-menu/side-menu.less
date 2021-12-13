@@ -34,7 +34,40 @@
     text-align: center;
     color: #495060;
   }
+  .ivu-menu-light {
+    background: transparent;
+  }
+  .ivu-menu-horizontal.ivu-menu-light:after {
+    display: none;
+  }
+  .ivu-menu-horizontal .ivu-menu-submenu .ivu-select-dropdown .ivu-menu-item:hover {
+    background: transparent;
+    color: #2d8cf0;
+  }
+  
+  .ivu-menu-light.ivu-menu-horizontal {
+    .ivu-menu-item, .ivu-menu-item-active {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+    }
+    
+    .ivu-menu-item:hover {
+      color: #fff;
+      border: none;
+    }
+    .ivu-menu-submenu {
+      border: none;
+    }
+  }
+  .ivu-menu-submenu .ivu-menu-submenu-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
 }
+
 .menu-title{
   padding-left: 6px;
 }

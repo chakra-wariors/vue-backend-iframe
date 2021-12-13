@@ -1,16 +1,15 @@
 <template>
 <div style="height: 100%">
-  <Row class="nav" align="middle" style="background: #3c8dbc; color: #fff; font-size: 16px; padding: 10px; 0">
-    <Col class="col" style="width: 256px; font-size: 20px;" span="2">公共QA平台</Col>
-    <Col class="col" span="2" v-for="nav in navs" :key="nav.name">
-      <a :href="nav.href" target="_blank">{{nav.name}}</a>
+  <Row type="flex" :gutter="8" class="nav" align="middle" style="background: #3c8dbc; color: #fff; font-size: 16px;">
+    <Col class="col" style="flex-basis: 200px; font-size: 20px;" span="2">
+      <router-link to="/home">公共QA平台</router-link>
+    </Col>
+    <Col :span="18">
+      <side-menu ref="sideMenu" :active-name="$route.name" :collapsed="collapsed" @on-select="turnToPage" :menu-list="menuList">
+      </side-menu>
     </Col>
   </Row>
   <Layout style="height: 100%" class="main">
-    <Sider hide-trigger collapsible :width="256" :collapsed-width="64" v-model="collapsed" class="left-sider" :style="{overflow: 'hidden'}">
-      <side-menu accordion ref="sideMenu" :active-name="$route.name" :collapsed="collapsed" @on-select="turnToPage" :menu-list="menuList">
-      </side-menu>
-    </Sider>
     <Layout>
       <Content class="main-content-con">
         <Layout class="main-layout-con">
@@ -37,7 +36,7 @@ import Language from './components/language'
 import ErrorStore from './components/error-store'
 import { mapMutations, mapActions, mapGetters } from 'vuex'
 import { getNewTagList, routeEqual } from '@/libs/util'
-import routers, { navs } from '@/router/routers'
+import routers from '@/router/routers'
 import minLogo from '@/assets/images/logo-min.jpg'
 import maxLogo from '@/assets/images/logo.jpg'
 import './main.less'
@@ -55,7 +54,6 @@ export default {
   },
   data () {
     return {
-      navs,
       collapsed: false,
       minLogo,
       maxLogo,
