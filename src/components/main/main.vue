@@ -1,7 +1,7 @@
 <template>
 <div style="height: 100%">
   <Row class="nav" align="middle" style="background: #3c8dbc; color: #fff; font-size: 16px; padding: 10px; 0">
-    <Col class="col" style="width: 256px; font-size: 20px;" span="2">有赞QA平台</Col>
+    <Col class="col" style="width: 256px; font-size: 20px;" span="2">公共QA平台</Col>
     <Col class="col" span="2" v-for="nav in navs" :key="nav.name">
       <a :href="nav.href" target="_blank">{{nav.name}}</a>
     </Col>
